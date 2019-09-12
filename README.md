@@ -1,16 +1,16 @@
-# PSP Angular Evaluation
+# Software Engineer Evaluation
 
 ## Introduction
 
 The purpose of this evaluation is to help us better understand your
-ability to follow a simple project plan and deliver a working Angular 5
+ability to follow a simple project plan and deliver a working Angular or React
 solution. Should you have any questions or concerns regarding the instructions
 that follow please reach out to us immediately for help or clarification.
 
 ## Project
 
 NASA provides a public API for searching images. The project you
-are building will query this API and display results in an Angular 5 app. 
+are building will query this API and display results in a SPA (single page web application). 
 You do not need an API key to use the service--simply follow the URL pattern below:
 
 `GET https://images-api.nasa.gov/search?media_type=image&q=Jupiter`
@@ -23,12 +23,9 @@ your lowercased GitHub user name):
 
 `git checkout master`
 
-`git checkout -b <name>-angular-evaluation`
+`git checkout -b <name>-evaluation`
 
-`git push -u origin <name>-angular-evaluation`
-
-Make sure you have the latest [Angular CLI](https://github.com/angular/angular-cli) 
-installed (globally) and create a new Angular 5 project within this repo.
+`git push -u origin <name>-evaluation`
 
 ## Step 2: Create a GitHub Pull Request and Assign Yourself
 
