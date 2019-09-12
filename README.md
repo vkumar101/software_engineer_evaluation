@@ -34,18 +34,13 @@ remote feature branch from Step 1. Go to this repo on GitHub, open a new pull
 request for this feature branch, and 
 [assign yourself](https://help.github.com/articles/assigning-issues-and-pull-requests-to-other-github-users).
 
-## Step 3: Reference Zeplin for Design
+## Step 3: Reference Images for Design
 
-Visit the Zeplin project "[PSP Angular Evaluation](https://zpl.io/a7Zmy6Y)" 
-via the invitation link you received by email. Take a careful look at 
-each screen in the project. Each screen includes a user story in the 
-"description" field (also listed below in this README). You can expose the 
-clickable elements on each screen by holding down the SHIFT key on your keyboard.
+Take a careful look at each screen in this project. Each screen includes a user story in the 
+"description" field (also listed below in this README). 
 
-Zeplin should provide you with enough context around HTML layout, measurements,
-CSS, colors and images to complete this evaluation. If you have a need for 
-anything other than what you see in the Zeplin project please contact PSP 
-immediately.
+The images should provide you with enough context around HTML layout, measurements,
+CSS, colors and images to complete this evaluation.
 
 ## Step 4: Implement User Stories
 
@@ -92,11 +87,6 @@ So that I no longer see the modal dialog
   Then the modal dialog should close
   And I should see a single image search result
 ```
-
-## Step 4.5: Bonus
-
-Provide automated E2E testing that verifies your implementation of the stories 
-outlined above satisfy the acceptance criteria.
 
 ## Step 5: Request a Code Review
 
