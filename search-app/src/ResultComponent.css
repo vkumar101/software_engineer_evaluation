@@ -1,0 +1,31 @@
+.result {
+  display: inline-flex;
+  float: left;
+}
+.result-description {
+  text-align: left;
+  align-self: center;
+}
+.thumb-nail {
+  border-radius: 50%;
+  height: 150px;
+  width: 150px;
+  border: solid #1a8cff;
+  margin-right: 12px;
+  cursor: pointer;
+}
+.time-detail {
+  font-size: 20px;
+  font-family: sans-serif;
+}
+.button-link {
+  background: none !important;
+  border: none !important;
+  padding: 0 !important;
+  width: auto !important;
+  font-family: arial, sans-serif;
+  color: #1a8cff !important;
+  text-decoration: underline;
+  font-size: 20px !important;
+  cursor: pointer;
+}

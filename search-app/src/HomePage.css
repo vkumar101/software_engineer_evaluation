@@ -8,8 +8,9 @@
   z-index: 1;
   background: #ffffff;
   padding: 45px;
-  width: 700px;
+  width: 50%;
   text-align: center;
+  display: grid;
 }
 .form label {
   font-family: sans-serif;
@@ -20,15 +21,17 @@
 }
 .form input {
   font-family: sans-serif;
-  width: 100%;
+  width: calc(92% - 8px);
   padding: 12px;
   font-size: 24px;
   margin-bottom: 8px;
+  margin-right: 8px;
 }
 .form button {
   outline: 0;
   background: #1a8cff;
-  width: 100%;
+  min-width: 58px;
+  width: 8%;
   border: 0;
   border-radius: 2px;
   padding: 15px;
@@ -42,4 +45,11 @@
 .form button:active,
 .form button:focus {
   background: #99ccff;
+}
+
+.number-results {
+  display: inline-flex;
+  font-style: italic;
+  font-size: 20px;
+  margin-bottom: 16px;
 }
