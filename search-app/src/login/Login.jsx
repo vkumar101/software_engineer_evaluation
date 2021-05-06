@@ -6,6 +6,7 @@
 import "./Login.css";
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
+import Swal from "sweetalert2";
 
 /**
  * This component creates the Login Page
@@ -17,12 +18,28 @@ function Login() {
   const [password, setPassword] = useState("");
   ////#endregion
 
+  // valid accounts, for the sake of this assignment
+  const accounts = {
+    "someone@example.com": "password",
+  };
   const history = useHistory();
 
   /**
    * route the path to home page when the user logs in
    */
-  const routeChange = () => {
+  const routeChange = (event) => {
+    // if input is not valid, then alert the user
+    if (accounts[email] !== password) {
+      Swal.fire({
+        title: "Invalid Login",
+        text: "Username or Password is incorrect",
+        icon: "warning",
+        confirmButtonText: "Okay",
+      });
+      event.stopPropagation();
+      event.preventDefault();
+      return false;
+    }
     let path = "/home";
     history.push(path);
   };
