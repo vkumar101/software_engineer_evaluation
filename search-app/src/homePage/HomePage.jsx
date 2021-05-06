@@ -1,10 +1,15 @@
+/**
+ * @author Veena Kumar
+ * May 2021
+ */
+
 import React, { useState } from "react";
 import "./HomePage.css";
 import ResultComponent from "./ResultComponent";
 import { get } from "axios";
 
 /**
- * This component creates the Home Search
+ * This component creates the Home Page Search
  */
 function HomePage() {
   //#region states
@@ -47,11 +52,12 @@ function HomePage() {
             placeholder="Search for images..."
             onChange={(event) => setSearchStr(event.target.value)}
           />
-          <button type="submit">Go</button>
+          <button type="submit button">Go</button>
         </form>
         {/* query may take a while, so it is good to show loading state */}
         {loading && <span>Loading...</span>}
-        {numResults && (
+        {/* show the number of results, if any */}
+        {!!(numResults && !loading) && (
           <div className="number-results">
             Showing 1 of {numResults} results
           </div>

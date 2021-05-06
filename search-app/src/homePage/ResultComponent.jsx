@@ -1,3 +1,8 @@
+/**
+ * @author Veena Kumar
+ * May 2021
+ */
+
 import React, { useState } from "react";
 import moment from "moment";
 import { Lightbox } from "react-modal-image";
@@ -13,6 +18,12 @@ import "./ResultComponent.css";
 function ResultComponent(props) {
   const { result } = props;
 
+  //#region data properties
+  const location = result?.links[0].href;
+  const title = result?.data[0].title;
+  const date = result?.data[0].date_created;
+  //#endregion
+
   //#region states
   const [modalOpen, setModalOpen] = useState(false);
   //#endregion
@@ -23,7 +34,7 @@ function ResultComponent(props) {
         id="myImg"
         title="click to see full image"
         className="thumb-nail"
-        src={result.links[0].href}
+        src={location}
         alt="N/A"
         onClick={() => setModalOpen(true)}
       />
@@ -31,8 +42,8 @@ function ResultComponent(props) {
       {modalOpen && (
         <Lightbox
           hideZoom
-          large={result.links[0].href}
-          alt={result.data[0].title}
+          large={location}
+          alt={title}
           onClose={() => setModalOpen(false)}
         />
       )}
@@ -42,11 +53,11 @@ function ResultComponent(props) {
           className="button-link"
           onClick={() => setModalOpen(true)}
         >
-          {result.data[0].title}
+          {title}
         </button>
         <br />
         <span className="time-detail">
-          {moment(result.data[0].date_created, "YYYY-MM-DDTHH:mm:ssZ").format(
+          {moment(date, "YYYY-MM-DDTHH:mm:ssZ").format(
             "ddd, DD MMM YYYY HH:mm:ss Z"
           )}
         </span>
